@@ -1,0 +1,5 @@
+{
+  "role-name" : "test-workshop-internal",
+  "description" : "Internal role used for amping",
+  "role" : [ "test-workshop-writer" ]
+}

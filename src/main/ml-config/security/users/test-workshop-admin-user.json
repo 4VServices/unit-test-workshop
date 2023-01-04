@@ -1,0 +1,5 @@
+{
+  "user-name" : "test-workshop-admin",
+  "password" : "test-workshop-admin",
+  "role" : [ "test-workshop-admin" ]
+}
