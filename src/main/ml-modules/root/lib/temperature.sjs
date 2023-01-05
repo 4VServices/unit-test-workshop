@@ -1,18 +1,18 @@
 "use strict";
 
 /**
- * Convert a Celcius temperature to Fahrenheit.
- * @param celcius a Number representing a temperature in Celcius.
+ * Convert a Celsius temperature to Fahrenheit.
+ * @param celsius a Number representing a temperature in Celsius.
  */
-function celciusToFahrenheit(celcius) {}
+function celsiusToFahrenheit(celsius) {}
 
 /**
- * Convert a Fahrenheit temperature to Celcius.
+ * Convert a Fahrenheit temperature to Celsius.
  * @param fahrenheit a Number representing a temperature in Fahrenheit.
  */
-function fahrenheitToCelcius(fahrenheit) {}
+function fahrenheitToCelsius(fahrenheit) {}
 
 module.exports = {
-  celciusToFahrenheit,
-  fahrenheitToCelcius
+  celsiusToFahrenheit,
+  fahrenheitToCelsius
 };
