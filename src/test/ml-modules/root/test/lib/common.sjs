@@ -51,6 +51,7 @@ function removeTestCredential(credentialName) {
   xdmp.invokeFunction(
     () => {
       const sec = require("/MarkLogic/security.xqy");
+      sec.removeUser(sec.credentialGetUsername(credentialName));
       sec.removeCredential(credentialName);
     },
     {
