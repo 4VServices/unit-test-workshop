@@ -21,6 +21,49 @@ function calculateWaterRequirements(recipe) {}
  * @param other String or Array of Strings indicating the name of a non malt/hop/yeast ingredient
  * @return an Array of DocumentNodes with recipes
  */
-function recipeByIngredient(malt, hop, yeast, other) {}
+function recipeByIngredient(malt, hop, yeast, other) {
+  let queries = [];
+  if (malt) {
+    queries.push(
+      cts.jsonPropertyScopeQuery(
+        "fermentable",
+        Array.isArray(malt)
+          ? cts.andQuery(malt.map((curr) => cts.jsonPropertyValueQuery("name", curr)))
+          : cts.jsonPropertyValueQuery("name", malt)
+      )
+    );
+  }
+  if (hop) {
+    queries.push(
+      cts.jsonPropertyScopeQuery(
+        "hop",
+        Array.isArray(hop)
+          ? cts.andQuery(hop.map((curr) => cts.jsonPropertyValueQuery("variety", curr)))
+          : cts.jsonPropertyValueQuery("variety", hop)
+      )
+    );
+  }
+  if (yeast) {
+    queries.push(
+      cts.jsonPropertyScopeQuery(
+        "yeast",
+        Array.isArray(yeast)
+          ? cts.andQuery(yeast.map((curr) => cts.jsonPropertyValueQuery("strand", curr)))
+          : cts.jsonPropertyValueQuery("strand", yeast)
+      )
+    );
+  }
+  if (other) {
+    queries.push(
+      cts.jsonPropertyScopeQuery(
+        "miscellaneousAdditions",
+        Array.isArray(other)
+          ? cts.andQuery(other.map((curr) => cts.jsonPropertyValueQuery("name", curr)))
+          : cts.jsonPropertyValueQuery("name", other)
+      )
+    );
+  }
+  return cts.search(cts.andQuery(queries), "unfiltered").toArray();
+}
 
 module.exports = { calculateWaterRequirements, recipeByIngredient };
