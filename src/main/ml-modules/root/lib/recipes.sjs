@@ -14,7 +14,7 @@
 function calculateWaterRequirements(recipe) {}
 
 /**
- *
+ * Find recipes based on the specified combination of ingredients.
  * @param malt String or Array of Strings indicating the names of malt ingredients
  * @param hop String or Array of Strings indicating the variety of hops
  * @param yeast String or Array of Strings indicating the strand of yeast
