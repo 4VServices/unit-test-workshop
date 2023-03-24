@@ -5,6 +5,9 @@ const temp = require("/lib/temperature.sjs");
 
 let assertions = [];
 
-assertions.push(test.success());
+assertions.push(
+  test.assertEqual(32, temp.celsiusToFahrenheit(0)),
+  test.assertEqual(212, temp.celsiusToFahrenheit(100))
+);
 
 assertions;
