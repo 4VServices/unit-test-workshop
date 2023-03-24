@@ -65,7 +65,7 @@
               }
             }
           ],
-          "hop_additions": [
+          "hopAdditions": [
             {
               "hop": {
                 "variety": "Nugget",
@@ -133,7 +133,7 @@
               }
             }
           ],
-          "miscellaneous_additions": [
+          "miscellaneousAdditions": [
             {
               "addition": {
                 "name": "Irish moss",
@@ -163,8 +163,8 @@
               }
             }
           ],
-          "culture_additions": [],
-          "water_additions": []
+          "cultureAdditions": [],
+          "waterAdditions": []
         },
         "mashSteps": [
           {
