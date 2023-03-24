@@ -6,7 +6,7 @@
  */
 function celsiusToFahrenheit(celsius) {
   // ˚F = (˚C * 9/5) + 32
-  return (celsius * 9) / 5 + 32;
+  return 0;
 }
 
 /**
@@ -15,7 +15,7 @@ function celsiusToFahrenheit(celsius) {
  */
 function fahrenheitToCelsius(fahrenheit) {
   // ˚C = (˚F - 32 ) * 5/9
-  return ((fahrenheit - 32) * 5) / 9;
+  return 0;
 }
 
 module.exports = {
