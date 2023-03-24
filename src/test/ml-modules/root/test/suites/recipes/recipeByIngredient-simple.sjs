@@ -3,6 +3,10 @@
 const test = require("/test/test-helper.xqy");
 const rec = require("/lib/recipes.sjs");
 
+/**
+ * Test Case: run searches with single ingredients.
+ */
+
 let assertions = [];
 
 /**

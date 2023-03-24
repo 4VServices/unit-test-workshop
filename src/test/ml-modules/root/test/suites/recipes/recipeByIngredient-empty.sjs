@@ -3,6 +3,10 @@
 const test = require("/test/test-helper.xqy");
 const rec = require("/lib/recipes.sjs");
 
+/**
+ * Test case: run searches that should not return any results.
+ */
+
 let assertions = [];
 
 /**
