@@ -10,5 +10,4 @@ assertions.push(
   test.assertEqual(100, temp.fahrenheitToCelsius(212))
 );
 
-test.log("fahrenheitToCelsius COMPLETE....");
 assertions;
