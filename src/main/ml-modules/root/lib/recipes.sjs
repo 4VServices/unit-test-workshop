@@ -66,4 +66,13 @@ function recipeByIngredient(malt, hop, yeast, other) {
   return cts.search(cts.andQuery(queries), "unfiltered").toArray();
 }
 
-module.exports = { calculateWaterRequirements, recipeByIngredient };
+/**
+ * Add a comment to a recipe.
+ * @param recipeURI The URI of the recipe document.
+ * @param commenter The username of the person leaving the comment.
+ * @param comment String. The text of the comment.
+ * @param timestamp xs.dateTime
+ */
+function addCommentToRecipe(recipeURI, commenter, comment, timestamp) {}
+
+module.exports = { addCommentToRecipe, calculateWaterRequirements, recipeByIngredient };
