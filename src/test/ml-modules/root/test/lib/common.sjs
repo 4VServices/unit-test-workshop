@@ -61,4 +61,22 @@ function removeTestCredential(credentialName) {
   );
 }
 
-module.exports = { createTestCredential, removeTestCredential };
+/**
+ * Runs the provided function in a separate update transaction.
+ * @param func a zero-arity function
+ * @return the response from the function in a Sequence
+ */
+function runAsUpdate(func) {
+  return xdmp.invokeFunction(func, { "update": "true" });
+}
+
+/**
+ * Runs the provided function in a separate query request.
+ * @param func a zero-arity function
+ * @return the response from the function in a Sequence
+ */
+function runAsQuery(func) {
+  return xdmp.invokeFunction(func, { "update": "false" });
+}
+
+module.exports = { createTestCredential, removeTestCredential, runAsUpdate, runAsQuery };
