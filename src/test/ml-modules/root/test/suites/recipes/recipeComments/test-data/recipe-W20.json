@@ -1,0 +1,232 @@
+{
+  "envelope": {
+    "headers": {
+      "comments": []
+    },
+    "instance": {
+      "Recipe": {
+        "name": "W20",
+        "type": "all grain",
+        "author": "BYO/Weyerbacher",
+        "batchSize": {
+          "unit": "gal",
+          "value": 5.5
+        },
+        "boil": 60,
+        "style": {
+          "name": "Helles Bock",
+          "category": "26",
+          "styleLetter": "D",
+          "styleGuide": "BJCP 2021",
+          "styleLink": "https://www.bjcp.org/style/2021/26/26D/belgian-dark-strong-ale/",
+          "type": "beer"
+        },
+        "ingredients": {
+          "fermentableAdditions": [
+            {
+              "fermentable": {
+                "name": "Pislner",
+                "origin": "Belgium",
+                "type": "grain",
+                "color": {
+                  "unit": "Lovi",
+                  "value": 1.6
+                },
+                "amount": {
+                  "unit": "lb",
+                  "value": 13.5
+                }
+              }
+            },
+            {
+              "fermentable": {
+                "name": "Wheat",
+                "origin": "Belgium",
+                "type": "grain",
+                "color": {
+                  "unit": "Lovi",
+                  "value": 1.8
+                },
+                "amount": {
+                  "unit": "lb",
+                  "value": 2
+                }
+              }
+            },
+            {
+              "fermentable": {
+                "name": "Caramel 40L",
+                "origin": "USA",
+                "type": "grain",
+                "color": {
+                  "unit": "Lovi",
+                  "value": 40
+                },
+                "amount": {
+                  "unit": "oz",
+                  "value": 6
+                }
+              }
+            },
+            {
+              "fermentable": {
+                "name": "Special B",
+                "origin": "Belgium",
+                "type": "grain",
+                "color": {
+                  "unit": "Lovi",
+                  "value": 115
+                },
+                "amount": {
+                  "unit": "oz",
+                  "value": 6
+                }
+              }
+            },
+            {
+              "fermentable": {
+                "name": "Belgian Candi Syrup - D-90",
+                "origin": "Belgium",
+                "type": "sugar",
+                "color": {
+                  "unit": "Lovi",
+                  "value": 90
+                },
+                "amount": {
+                  "unit": "lb",
+                  "value": 1.25
+                }
+              }
+            },
+            {
+              "fermentable": {
+                "name": "cane sugar",
+                "type": "sugar",
+                "color": {
+                  "unit": "Lovi",
+                  "value": 0
+                },
+                "amount": {
+                  "unit": "oz",
+                  "value": 12
+                }
+              }
+            }
+          ],
+          "hopAdditions": [
+            {
+              "hop": {
+                "variety": "Nugget",
+                "amount": {
+                  "unit": "oz",
+                  "value": 0.4
+                },
+                "type": "pellet",
+                "alphaAcids": 17.5,
+                "use": "boil",
+                "time": {
+                  "unit": "min",
+                  "duration": 90
+                },
+                "IBUs": 23.05
+              }
+            },
+            {
+              "hop": {
+                "variety": "East Kent Goldings",
+                "amount": {
+                  "unit": "oz",
+                  "value": 1
+                },
+                "type": "pellet",
+                "alphaAcids": 4.2,
+                "use": "aroma",
+                "time": {
+                  "unit": "min",
+                  "duration": 0
+                }
+              }
+            }
+          ],
+          "miscellaneousAdditions": [
+            {
+              "addition": {
+                "name": "yeast nutrient",
+                "type": "other",
+                "use": "boil",
+                "time": {
+                  "unit": "min",
+                  "duration": 15
+                },
+                "amount": {
+                  "unit": "tsp",
+                  "value": 0.5
+                }
+              }
+            },
+            {
+              "addition": {
+                "name": "ground star anise",
+                "type": "spice",
+                "use": "boil",
+                "time": {
+                  "unit": "min",
+                  "duration": 15
+                },
+                "amount": {
+                  "unit": "oz",
+                  "value": 0.1
+                }
+              }
+            },
+            {
+              "addition": {
+                "name": "ground coriander seeds",
+                "type": "spice",
+                "use": "boil",
+                "time": {
+                  "unit": "min",
+                  "duration": 2
+                },
+                "amount": {
+                  "unit": "oz",
+                  "value": 0.25
+                }
+              }
+            }
+          ],
+          "yeastAdditions": [
+            {
+              "yeast": {
+                "brand": "Imperial Yeast",
+                "strand": "B48 Triple Double",
+                "amount": 1,
+                "fermentationTemp": {
+                  "scale": "Fahrenheit",
+                  "temp": 70
+                }
+              }
+            }
+          ],
+          "cultureAdditions": [],
+          "waterAdditions": []
+        },
+        "mashSteps": [
+          {
+            "mashStep": {
+              "type": "temperature",
+              "targetTemp": {
+                "scale": "Fahrenheit",
+                "temp": 149
+              },
+              "time": {
+                "unit": "min",
+                "duration": 60
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
