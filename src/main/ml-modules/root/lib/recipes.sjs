@@ -32,4 +32,11 @@ function recipeByIngredient(malt, hop, yeast, other) {}
  */
 function addCommentToRecipe(recipeURI, commenter, comment, timestamp) {}
 
-module.exports = { addCommentToRecipe, calculateWaterRequirements, recipeByIngredient };
+/**
+ * Get all the comments attached to a recipe.
+ * @param recipeURI The URI of the recipe document.
+ * @return Array of comment objects, each with properties: 'commentBy', 'commentText', 'commentAt'.
+ */
+function getCommentsFromRecipe(recipeURI) {}
+
+module.exports = { addCommentToRecipe, getCommentsFromRecipe, calculateWaterRequirements, recipeByIngredient };
