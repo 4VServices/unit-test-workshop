@@ -73,6 +73,26 @@ function recipeByIngredient(malt, hop, yeast, other) {
  * @param comment String. The text of the comment.
  * @param timestamp xs.dateTime
  */
-function addCommentToRecipe(recipeURI, commenter, comment, timestamp) {}
+function addCommentToRecipe(recipeURI, commenter, comment, timestamp) {
+  xdmp.nodeInsertChild(cts.doc(recipeURI).xpath('/envelope/headers/array-node("comments")'), {
+    "comment": { "commentBy": commenter, "commentText": comment, "commentAt": timestamp }
+  });
+}
 
-module.exports = { addCommentToRecipe, calculateWaterRequirements, recipeByIngredient };
+/**
+ * Get all the comments attached to a recipe.
+ * @param recipeURI The URI of the recipe document.
+ * @return Array of comment objects, each with properties: 'commentBy', 'commentText', 'commentAt'.
+ */
+function getCommentsFromRecipe(recipeURI) {
+  let doc = cts.doc(recipeURI);
+  if (doc) {
+    let commentsArray = doc.xpath("/envelope/headers/comments");
+    if (commentsArray) {
+      return commentsArray.toObject().map((curr) => curr.comment);
+    }
+  }
+  return [];
+}
+
+module.exports = { addCommentToRecipe, getCommentsFromRecipe, calculateWaterRequirements, recipeByIngredient };
