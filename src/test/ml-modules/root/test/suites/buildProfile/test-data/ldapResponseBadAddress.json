@@ -1,0 +1,18 @@
+{
+  "stack": "XDMP-LDAP: xdmp.ldapSearch(\"(sAMAccountName=epoe)\", {username:..., password:..., serverUri:\"ldaps://ldap.DOESNOTEXIST.com:636\", ...}) -- ldap_simple_bind_s failed on ldap server ldaps://ldap.DOESNOTEXIST.com:636: Can't contact LDAP server (-1)\nin [anonymous], at 11:12 [javascript]\nin /qconsole/endpoints/evaljs.sjs,\nin xdmp:invoke(function bound (), Element(\"<options xmlns='xdmp:eval'><database>16467248460927825779</database>...</options>\")) [javascript]\nin /qconsole/endpoints/evaljs.sjs [javascript]\nin /MarkLogic/appservices/qconsole/qconsole-js-amped.sjs [javascript]\nin /qconsole/endpoints/evaljs.sjs [javascript]",
+  "mlerr": {},
+  "data": ["ldap_simple_bind_s", "ldaps://ldap.DOESNOTEXIST.DOESNOTEXIST:636", "Can't contact LDAP server (-1)"],
+  "message": "LDAP Error",
+  "name": "XDMP-LDAP",
+  "retryable": false,
+  "stackFrames": [
+    {
+      "uri": "[anonymous]",
+      "line": 11,
+      "column": 12,
+      "operation": "xdmp.ldapSearch(\"(sAMAccountName=epoe)\", {username:..., password:..., serverUri:\"ldaps://ldap.DOESNOTEXIST.com:636\", ...})",
+      "language": "javascript"
+    }
+  ],
+  "toString": "function toString()"
+}

@@ -1,0 +1,18 @@
+{
+  "stack": "XDMP-LDAP-INVALID-CRED: xdmp.ldapSearch(\"(sAMAccountName=epoe)\", {username:..., password:..., serverUri:\"ldaps://ldap.DOESNOTEXIST.com:636\", ...}) -- ldap_simple_bind_s failed on ldap server ldaps://ldap.DOESNOTEXIST.com:636: Invalid credentials (49)\nin [anonymous], at 11:12 [javascript]\nin /qconsole/endpoints/evaljs.sjs,\nin xdmp:invoke(function bound (), Element(\"<options xmlns='xdmp:eval'><database>16467248460927825779</database>...</options>\")) [javascript]\nin /qconsole/endpoints/evaljs.sjs [javascript]\nin /MarkLogic/appservices/qconsole/qconsole-js-amped.sjs [javascript]\nin /qconsole/endpoints/evaljs.sjs [javascript]",
+  "mlerr": {},
+  "data": ["ldap_simple_bind_s", "ldaps://ldap.DOESNOTEXIST.com:636", "Invalid credentials (49)"],
+  "message": "LDAP Error",
+  "name": "XDMP-LDAP-INVALID-CRED",
+  "retryable": false,
+  "stackFrames": [
+    {
+      "uri": "[anonymous]",
+      "line": 11,
+      "column": 12,
+      "operation": "xdmp.ldapSearch(\"(sAMAccountName=epoe)\", {username:..., password:..., serverUri:\"ldaps://ldap.DOESNOTEXIST.com:636\", ...})",
+      "language": "javascript"
+    }
+  ],
+  "toString": "function toString()"
+}
