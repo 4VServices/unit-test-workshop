@@ -1,5 +1,12 @@
 {
-  "role-name" : "test-workshop-reader",
-  "description" : "Can view documents, but not edit",
-  "role" : [ "rest-reader", "test-workshop-nobody" ]
+  "role-name": "test-workshop-reader",
+  "description": "Can view documents, but not edit",
+  "role": ["rest-reader", "test-workshop-nobody"],
+  "privilege": [
+    {
+      "privilege-name": "xdmp:value",
+      "action": "http://marklogic.com/xdmp/privileges/xdmp-value",
+      "kind": "execute"
+    }
+  ]
 }
