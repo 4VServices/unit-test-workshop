@@ -2,6 +2,12 @@
 
 const temp = require("/lib/temperature.sjs");
 
+/**
+ * Given a temperature, convert it from celsius to fahrenheit or vice versa.
+ * @param context
+ * @param params Must specifify either 'celsius' or 'fahrenheit'.
+ * @returns JSON object with both 'celsius' and 'fahrenheit' properties.
+ */
 function get(context, params) {
   if (fn.exists(params.celsius)) {
     const celNum = Number.parseFloat(params.celsius);
