@@ -1,6 +1,46 @@
 "use strict";
 
 /**
+ * Create a user for testing.
+ * @param username A String with the username to create.
+ * @param roles An Array of Strings with role names.
+ * @return undefined
+ */
+function createTestUser(username, roles) {
+  xdmp.invokeFunction(
+    () => {
+      const sec = require("/MarkLogic/security.xqy");
+      if (!sec.userExists(username)) {
+        const password = sem.uuidString();
+
+        sec.createUser(username, "User for unit testing", password, roles, null, null);
+      }
+    },
+    {
+      database: xdmp.securityDatabase(),
+      update: "true"
+    }
+  );
+}
+
+/**
+ * Delete a user by username.
+ * @param username A String with the username to delete.
+ */
+function removeTestUser(username) {
+  xdmp.invokeFunction(
+    () => {
+      const sec = require("/MarkLogic/security.xqy");
+      sec.removeUser(username);
+    },
+    {
+      database: xdmp.securityDatabase(),
+      update: "true"
+    }
+  );
+}
+
+/**
  * Create a Secure Credential for testing.
  * @param credentialName
  * @param roles
@@ -66,8 +106,8 @@ function removeTestCredential(credentialName) {
  * @param func a zero-arity function
  * @return the response from the function in a Sequence
  */
-function runAsUpdate(func) {
-  return xdmp.invokeFunction(func, { "update": "true" });
+function runAsUpdate(func, options) {
+  return xdmp.invokeFunction(func, Object.assign({ "update": "true" }, options));
 }
 
 /**
@@ -75,8 +115,15 @@ function runAsUpdate(func) {
  * @param func a zero-arity function
  * @return the response from the function in a Sequence
  */
-function runAsQuery(func) {
-  return xdmp.invokeFunction(func, { "update": "false" });
+function runAsQuery(func, options) {
+  return xdmp.invokeFunction(func, Object.assign({ "update": "false" }, options));
 }
 
-module.exports = { createTestCredential, removeTestCredential, runAsUpdate, runAsQuery };
+module.exports = {
+  createTestUser,
+  removeTestUser,
+  createTestCredential,
+  removeTestCredential,
+  runAsUpdate,
+  runAsQuery
+};
