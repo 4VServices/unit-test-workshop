@@ -18,7 +18,7 @@ function createTestCredential(credentialName, roles, path, targetPort, auth = "d
           .toArray()
           .some((currName) => currName.toString() === credentialName)
       ) {
-        const username = `test-user-${credentialName}-${sem.uuidString()}`;
+        const username = `%%mlAppName%%-test-user-${credentialName}-${sem.uuidString()}`;
         const password = sem.uuidString();
 
         sec.createUser(username, "User for unit testing", password, roles, null, null);
