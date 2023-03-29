@@ -1,0 +1,188 @@
+{
+  "envelope": {
+    "headers": {},
+    "instance": {
+      "Recipe": {
+        "name": "Philly Special",
+        "type": "all grain",
+        "author": "David Cassel",
+        "batchSize": {
+          "unit": "gal",
+          "value": 5.5
+        },
+        "boil": 60,
+        "style": {
+          "name": "American IPA",
+          "category": "21",
+          "styleLetter": "A",
+          "styleGuide": "BJCP 2021",
+          "styleLink": "https://www.bjcp.org/style/2021/21/21A/american-ipa/",
+          "type": "beer"
+        },
+        "ingredients": {
+          "fermentableAdditions": [
+            {
+              "fermentable": {
+                "name": "Pale 2-row",
+                "origin": "USA",
+                "type": "grain",
+                "color": {
+                  "unit": "Lovi",
+                  "value": 1.8
+                },
+                "amount": {
+                  "unit": "lb",
+                  "value": 10
+                }
+              }
+            },
+            {
+              "fermentable": {
+                "name": "Munich - Light",
+                "type": "grain",
+                "color": {
+                  "unit": "Lovi",
+                  "value": 10
+                },
+                "amount": {
+                  "unit": "lb",
+                  "value": 2
+                }
+              }
+            },
+            {
+              "fermentable": {
+                "name": "Carapils",
+                "origin": "USA",
+                "type": "grain",
+                "color": {
+                  "unit": "Lovi",
+                  "value": 1.8
+                },
+                "amount": {
+                  "unit": "oz",
+                  "value": 4
+                }
+              }
+            }
+          ],
+          "hopAdditions": [
+            {
+              "hop": {
+                "variety": "Nugget",
+                "amount": {
+                  "unit": "oz",
+                  "value": 0.25
+                },
+                "type": "pellet",
+                "alphaAcids": 14,
+                "use": "boil",
+                "time": {
+                  "unit": "min",
+                  "duration": 60
+                },
+                "IBUs": 12.48
+              }
+            },
+            {
+              "hop": {
+                "variety": "Citra",
+                "amount": {
+                  "unit": "oz",
+                  "value": 2
+                },
+                "type": "pellet",
+                "alphaAcids": 11,
+                "use": "boil",
+                "time": {
+                  "unit": "min",
+                  "duration": 15
+                },
+                "IBUs": 38.93
+              }
+            },
+            {
+              "hop": {
+                "variety": "Citra",
+                "amount": {
+                  "unit": "oz",
+                  "value": 2
+                },
+                "type": "pellet",
+                "alphaAcids": 11,
+                "use": "aroma",
+                "time": {
+                  "unit": "min",
+                  "duration": 0
+                }
+              }
+            },
+            {
+              "hop": {
+                "variety": "Citra",
+                "amount": {
+                  "unit": "oz",
+                  "value": 2
+                },
+                "type": "pellet",
+                "alphaAcids": 11,
+                "use": "dry hop",
+                "time": {
+                  "unit": "day",
+                  "duration": 4
+                }
+              }
+            }
+          ],
+          "miscellaneousAdditions": [
+            {
+              "addition": {
+                "name": "Irish moss",
+                "type": "fining",
+                "use": "boil",
+                "time": {
+                  "unit": "min",
+                  "duration": 15
+                },
+                "amount": {
+                  "unit": "oz",
+                  "value": 0.25
+                }
+              }
+            }
+          ],
+          "yeastAdditions": [
+            {
+              "yeast": {
+                "brand": "Imperial Yeast",
+                "strand": "A15 Independence",
+                "amount": 1,
+                "fermentationTemp": {
+                  "scale": "Fahrenheit",
+                  "temp": 66
+                }
+              }
+            }
+          ],
+          "cultureAdditions": [],
+          "waterAdditions": []
+        },
+        "mashSteps": [
+          {
+            "mashStep": {
+              "type": "temperature",
+              "targetTemp": {
+                "scale": "Fahrenheit",
+                "temp": 150
+              },
+              "time": {
+                "unit": "min",
+                "duration": 60
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

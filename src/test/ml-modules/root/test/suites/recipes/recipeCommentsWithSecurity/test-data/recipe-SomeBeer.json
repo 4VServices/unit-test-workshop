@@ -1,0 +1,111 @@
+{
+  "envelope": {
+    "headers": {
+      "comments": [
+        {
+          "comment": {
+            "commentBy": "User1",
+            "commentText": "A comment",
+            "commentAt": "2023-02-01T01:23:45.123Z"
+          }
+        },
+        {
+          "comment": {
+            "commentBy": "User2",
+            "commentText": "Another comment",
+            "commentAt": "2023-02-02T01:23:45.123Z"
+          }
+        }
+      ]
+    },
+    "instance": {
+      "Recipe": {
+        "name": "Some Beer",
+        "type": "all grain",
+        "author": "Some Brewer",
+        "batchSize": {
+          "unit": "gal",
+          "value": 5.5
+        },
+        "boil": 60,
+        "style": {
+          "name": "Simple Beer",
+          "category": "1",
+          "styleLetter": "A",
+          "styleGuide": "BJCP 2021",
+          "styleLink": "https://www.bjcp.org/style/2021/1/1A/american-light-lager/",
+          "type": "beer"
+        },
+        "ingredients": {
+          "fermentableAdditions": [
+            {
+              "fermentable": {
+                "name": "Pislner",
+                "origin": "Belgium",
+                "type": "grain",
+                "color": {
+                  "unit": "Lovi",
+                  "value": 1.6
+                },
+                "amount": {
+                  "unit": "lb",
+                  "value": 10
+                }
+              }
+            }
+          ],
+          "hopAdditions": [
+            {
+              "hop": {
+                "variety": "Nugget",
+                "amount": {
+                  "unit": "oz",
+                  "value": 0.4
+                },
+                "type": "pellet",
+                "alphaAcids": 17.5,
+                "use": "boil",
+                "time": {
+                  "unit": "min",
+                  "duration": 90
+                },
+                "IBUs": 23.05
+              }
+            }
+          ],
+          "miscellaneousAdditions": [],
+          "yeastAdditions": [
+            {
+              "yeast": {
+                "brand": "SafAle",
+                "strand": "A0-4",
+                "amount": 1,
+                "fermentationTemp": {
+                  "scale": "Fahrenheit",
+                  "temp": 70
+                }
+              }
+            }
+          ],
+          "cultureAdditions": [],
+          "waterAdditions": []
+        },
+        "mashSteps": [
+          {
+            "mashStep": {
+              "type": "temperature",
+              "targetTemp": {
+                "scale": "Fahrenheit",
+                "temp": 149
+              },
+              "time": {
+                "unit": "min",
+                "duration": 60
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
