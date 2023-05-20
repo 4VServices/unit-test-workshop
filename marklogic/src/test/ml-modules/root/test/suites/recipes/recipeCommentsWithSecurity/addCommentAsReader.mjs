@@ -17,6 +17,8 @@ try {
 } catch (ex) {
   if (ex.name === "SEC-PERMDENIED") {
     assertions.push(test.success);
+  } else {
+    test.fail("Something else went wrong");
   }
 }
 
